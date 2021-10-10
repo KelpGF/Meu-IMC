@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" href="give.png">
+	<script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+
+	<title>Meu IMC</title>
+
+	<style>
+		table,
+		th,
+		td {
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+
+		th,
+		td {
+			padding: 5px;
+		}
+	</style>
+</head>
+
+<body>
+
+	<section class="hero is-danger is-bold is-medium">
+		<div class="hero-head">
+			<nav class="navbar">
+				<div class="container">
+					<div class="navbar-brand">
+						<img src="MeuIMC-logoBLANC-Bresil.png">
+					</div>
+				</div>
+			</nav>
+
+
+			<div class="hero-body">
+				<div class="container ">
+					<h1 class="title subtitle is-2">
+						ÍNDICE DE MASSA CORPORAL (IMC)
+					</h1>
+					<h2 class="subtitle">
+						<p class="subtitle is-5" align="justify">
+							O IMC serve para avaliar o peso do indivíduo em relçao à sua altura e assim indicar se está dentro do peso ideal, acima do peso ou abaixo do peso desejado. Estar dentro do peso certo é importante porque estar acima ou abaixo peso influencia na saúde, aumentando o risco de doenças como desnutrição quando se está abaixo do peso, e AVC e infarto, quando se está acima do peso. Assim, é comum os médicos, enfermeiros e nutricionistas avaliarem o peso da pessoa nas consultas de rotina para verificar a possibilidade de doenças que a pessoa pode estar pre-disposta.
+						</p>
+					</h2>
+				</div>
+			</div>
+
+
+			<div class="hero-foot">
+				<nav class="tabs is-boxed is-fullwidth">
+					<div class="container">
+						<ul>
+							<li class="is-active">
+								<a class="subtitle is-2">Tabela IMC</a>
+							</li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+							<li></li>
+						</ul>
+					</div>
+				</nav>
+			</div>
+		<div>
+	</section>
+
+	<br>
+	<br>
+	<br>
+
+	<div style=" height: 400px; width: 100%;">
+		<div class="container">
+			<div class="columns">
+				<div class="column">
+
+					<p class="subtitle is-5" align="justify"> 
+						Cada resultado do IMC deve ser avaliado por um profissional de saúde. No entanto, a tabela a seguir indica os possíveis resultados do IMC, de acordo com a Organização Mundial da Saúde, sendo que o IMC entre 18,5 a 24,9 representa o peso ideal e o menor risco de algumas doenças.
+					</p>
+
+					<table class="table" style="width:96%;">
+						<thead>
+							<tr>
+								<th class="is-danger ">Classificação</th>
+								<th class="is-danger">IMC</th>
+								<th class=" is-danger">O que pode acontecer</th>
+							</tr>
+						</thead>
+						<tr id="0" class="td_nivel">
+							<td>Muito abaixo do peso</td>
+							<td>menor que 17</td>
+							<td>Queda de cabelo, infertilidade, ausência menstrual</td>
+						</tr>
+						<tr id="1" class="td_nivel">
+							<td>Abaixo do peso</td>
+							<td>17 a 18,4 </td>
+							<td>Fadiga, stress, ansiedade</td>
+						</tr>
+						<tr id="2" class="td_nivel">
+							<td>Peso normal</td>
+							<td>18,5 a 24,9 </td>
+							<td>Menor risco de doenças cardíacas e vasculares</td>
+						</tr>
+						<tr id="3" class="td_nivel">
+							<td>Acima do peso</td>
+							<td>25 a 29,9 </td>
+							<td>Fadiga, má circulação, varizes</td>
+						</tr>
+						<tr id="4" class="td_nivel">
+							<td>Obesidade Grau I</td>
+							<td>30 a 34,9 </td>
+							<td>Diabetes, angina, infarto, aterosclerose</td>
+						</tr>
+						<tr id="5" class="td_nivel">
+							<td>Obesidade Grau II</td>
+							<td>35 a 39,9 </td>
+							<td>Apneia do sono, falta de ar</td>
+						</tr>
+						<tr id="6" class="td_nivel">
+							<td>Obesidade Grau III</td>
+							<td>maior que 40</td>
+							<td>Refluxo, dificuldade para se mover, escaras, diabetes, infarto, AVC</td>
+						</tr>
+
+					</table>
+				</div>
+
+				<div style="margin-left:30px;">
+					<article class="tile is-child notification is-parent ">
+
+						<center>
+							<p class="title ">Calculadora </p>
+						</center>
+
+						<br>
+
+						<p class="control has-icons-left has-icons-right">
+							<input class="input is-rounded is-danger " type="number" name="massa" id="m" value="82" placeholder="Peso (Kg)">
+							<span class="icon is-small is-left">
+								<i class="fas fa-weight-hanging"></i>
+							</span></input>
+							<br>
+							<br>
+						</p>
+						<p class="control has-icons-left has-icons-left">
+							<input class="input is-rounded is-danger" type="number" name="altura" id="h" value="1.8" placeholder="Altura (Metros)">
+							<span class="icon is-small is-left">
+								<i class="fas fa-weight"></i>
+							</span>
+							<br>
+							<br>
+							<center>
+								<input class="button is-danger is-outlined is-center" type="submit" id="btnCalc" value='Calcular IMC'>
+							</center>					
+						</p>
+
+						<div id="message"></div>
+					</article>
+				</div>
+			</div>
+		</div> 
+		<a href="#" id="IMC"></a>
+	</div>
+</body>
+
+</html>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<script>
+	$("#btnCalc").click(function() {
+		$("#message").html("");
+		$(".td_nivel").css("background-color", "white");
+
+		const massa = Number($("#m").val());
+		const altura = Number($("#h").val());
+
+		const cores = [
+			"#00BFFF",
+			"#87CEEB",
+			"#98FB98",
+			"#EEDD82",
+			"#FFA500",
+			"#FF4500",
+			"#FF4040"
+		];
+
+		let idx_cor;
+
+		const imc = massa / (altura*altura);
+		const imc_formatado = String(imc.toFixed(2)).replace(".", ","); 
+		
+		if (imc < 17) 						{	idx_cor = 0;	}	
+		if (imc >= 17 && imc < 18.5) 		{	idx_cor = 1; 	}	
+		if (imc >= 18.5 && imc <= 24.99) 	{	idx_cor = 2; 	}
+		if (imc >= 25 && imc <= 29.99) 		{	idx_cor = 3; 	}
+		if (imc >= 30 && imc <= 34.99) 		{	idx_cor = 4; 	}
+		if (imc >= 35 && imc <= 39.99) 		{	idx_cor = 5; 	}
+		if (imc >= 40) 						{	idx_cor = 6; 	}	
+
+		$(`#${idx_cor}`).css("background-color", cores[idx_cor]);
+
+		$("#message").html(`
+			<br>
+			<center>
+				<h4 class="subtitle is-5" style="display: none;" id="texto_message">
+					<strong>Seu IMC é: </strong>  ${imc_formatado} 
+				</h4>
+			</center>
+		`);
+
+		setTimeout(() => {
+			$("#texto_message").show("fast");
+		}, 500);
+	});
+</script>
